@@ -1,0 +1,157 @@
+.main {
+  margin-top: 25px;
+
+  &-wrapper {
+    position: relative;
+    margin-top: 25px;
+
+    .section__title {
+      padding-bottom: 15px;
+    }
+  }
+
+  .swiper-pagination {
+    top: 4px;
+    right: 0;
+    left: inherit;
+    width: inherit;
+    z-index: 0;
+  }
+
+  .swiper-pagination {
+    font-size: 5vw;
+    color: #BDBDBD;
+  }
+
+  .swiper-pagination-slash {
+    margin: 0 2vw; /* отступ между цифрой */
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
+
+  &__link-slide {
+    position: relative;
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  &__btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 25px;
+    background: #FFFFFF;
+    font-size: 12px;
+    letter-spacing: 0.1157vw;
+    color: $color-text;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      color: #FFFFFF;
+      background: $color-text; 
+
+      .icon {
+        fill: #FFFFFF;
+      }
+    }
+
+    .icon {
+      width: 24px;
+      height: 24px;
+      fill: $color-text;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .main {
+    margin-top: 0px;
+
+    &-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 8.5vw;
+      margin-top: 0px;
+
+      .section__title {
+        font-size: 4.45vw;
+      }
+    }
+
+    &__img {
+      height: 83.192vh;
+    }
+
+    .swiper {
+
+      .section__title {
+        margin-right: 8.473vw;
+      }
+    }
+
+    &__link-slide {
+      height: auto;
+    }
+
+    &__wrapper {
+      top: 0px;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: flex;
+      justify-content: center;
+      top: 76%;
+      left: 0;
+      width: 53px;
+      height: 53px;
+      border: 1px solid #F2F2F2;
+
+      .icon {
+        display: block;
+        width: 24px;
+      }
+
+      &:hover {
+        background: #F9F9F9; 
+      }
+    }
+
+    .swiper-button-prev {
+      transform: rotate(-180deg);
+
+      &::after {
+        display: none;
+      }
+    }
+
+    .swiper-button-next {
+      left: 70px;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    .swiper-pagination {
+      top: inherit;
+      right: inherit;
+      bottom: 17px;
+      left: inherit;
+
+      &-custom {
+        font-size: 24px;
+      }
+    }
+  }
+}
